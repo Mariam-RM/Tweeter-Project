@@ -22,7 +22,7 @@ function createTweetElement(tweet){
 
   let header = `
    <header class="tweet-header">
-     <img class="avatar" ${tweet.user.avatars.small}>
+     <img src="${tweet.user.avatars.small}" class="avatar" >
      <h3>${tweet.user.name}</h3>
      <h4 class="handle">${tweet.user.handle}</h4>
    </header>
@@ -39,6 +39,8 @@ function createTweetElement(tweet){
     <h5 class="post-date">${tweet.created_at}</h5>
     </footer>
   `;
+
+  console.log("whats a tweet, ", $tweet)
 
   // let securedTweetBody = $("tweet-body").text(tweetBody);
 
