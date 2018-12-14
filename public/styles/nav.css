@@ -1,0 +1,32 @@
+/* nav bar stylesheet */
+
+#nav-bar {
+
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding-top: 0px;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  display: flex;
+}
+
+.logo {
+
+  width: 80px;
+  height:80px;
+
+}
+
+#nav-bar .header {
+  display: flex;
+  justify-content: left;
+  align-self: center;
+  padding-left: 10px;
+  font-size: 200%
+
+}

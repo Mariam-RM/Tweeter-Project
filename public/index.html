@@ -6,28 +6,81 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- New Tweet entry form CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- character-counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
   </head>
 
   <body>
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
-      <img class="logo" src="/images/bird.png" width="80px" height="80px">
+      <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
+      <button type="button"> Compose </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+
+    <section class="new-tweet">
+      <div class="error-message"> </div>
+      <h2>Compose Tweet</h2>
+    <!--   <div class="error-message"> </div> -->
+      <form action="/tweets/" method="POST">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
+
+    <section id="tweet-container">
+     <!--  <article class="tweet">
+
+        <header class="tweet-header">
+          <img class="avatar">
+          <h3> My name </h3>
+          <h4 class=handle> myHandle </h4>
+        </header>
+
+        <section class="tweet-body"> <p> trying to make this work and praying that css is nice </p>
+        </section>
+
+        <footer class="tweet-foot">
+          <h5 class="post-date"> 10 days ago </h5>
+        </footer>
+
+      </article> -->
+    </section>
+
+    <!-- <h2> checking to see if this actually works </h2>
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+    proident, sunt in culpa qui officia de </p>
+ -->
     </main>
+
 
   </body>
 </html>

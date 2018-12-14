@@ -1,0 +1,106 @@
+/* css for new tweet entry point
+
+html we're working with
+    <section class="new-tweet">
+      <h2>Compose Tweet</h2>
+      <form action="/tweets/" method="POST">
+        <textarea name="text" placeholder="What are you humming about?"></textarea>
+        <input type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
+
+*/
+
+.new-tweet {
+ /* display: flex;*/
+ /* align-items: center;*/
+  justify-content: center;
+  background-color: #bcc5c58a;
+  border-radius: 10px;
+  border: 15px;
+  border-color: grey;
+ /* margin-left: 2em;
+  margin-right: 2em*/
+  padding: 2px;
+}
+
+section h2 {
+
+/*  display:flex -stretch;*/
+ /* border-bottom-style:1px;
+  border-bottom-color: black;*/
+  padding-left: 5px;
+  padding right: 5px;
+  border-bottom-style: solid;
+
+
+
+
+}
+
+section form {
+
+  display:flex-end;
+  align-content:
+
+}
+
+div.error-message{
+ /*s*/
+/*background-color: red*/
+display:none;
+background-color:aliceblue;
+color: red
+
+}
+
+.visible-error{
+  background-color: blue
+}
+
+.hidden-error{
+  display: none;
+}
+
+
+#tweet-container {
+
+  /*background-color: aliceblue;*/
+/*  padding : 5px ;
+  margin: auto;
+  margin-top: 10px;
+  border: 1px solid grey;
+  border-radius: 10px;*/
+}
+
+header.tweet-header {
+  background-color: aquamarine;
+}
+
+section.tweet-body {
+   background-color: aliceblue;
+   margin: ;
+}
+
+footer.tweet-foot {
+  background-color: aquamarine;
+}
+
+/* <section id="tweet-container">
+      <article class="tweet">
+
+        <header class="tweet-header">
+          <img class="avatar">
+          <h3> My name </h3>
+          <h4 class=handle> myHandle </h4>
+        </header>
+
+        <spa class="tweet-body"> <p> trying to make this work and praying that css is nice </p></span>
+
+        <footer class="tweet-foot">
+          <h5 class="post-date"> 10 days ago </h5>
+        </footer>
+
+      </article>
+*/
