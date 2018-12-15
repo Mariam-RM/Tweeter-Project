@@ -9,7 +9,11 @@ Tweeter is a simple, single-page Twitter clone allowing us to practice HTML, CSS
 3. Start the web server using the `npm run local` command. The app will be served at <http://localhost:8080/>.
 4. Go to <http://localhost:8080/> in your browser.
 
-##
+## Screenshots
+
+![screenshot of main page](https://github.com/Mariam-RM/Tweeter-Project/blob/master/screenshots/main-page.png?raw=true)
+![screenshot of mutiple tweets](https://github.com/Mariam-RM/Tweeter-Project/blob/master/screenshots/multiple-tweets.png?raw=true)
+![screenshot of error message](https://github.com/Mariam-RM/Tweeter-Project/blob/master/screenshots/error-message.png?raw=true)
 
 ## Dependencies
 
