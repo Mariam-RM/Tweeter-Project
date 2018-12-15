@@ -1,13 +1,35 @@
 /* css for new tweet entry point
 
 html we're working with
+
     <section class="new-tweet">
+      <div class="error-message"> </div>
       <h2>Compose Tweet</h2>
+    <!--   <div class="error-message"> </div> -->
       <form action="/tweets/" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <input type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
+    </section>
+
+    <section id="tweet-container">
+     <!--  <article class="tweet">
+
+        <header class="tweet-header">
+          <img class="avatar">
+          <h3> My name </h3>
+          <h4 class=handle> myHandle </h4>
+        </header>
+
+        <section class="tweet-body"> <p> trying to make this work and praying that css is nice </p>
+        </section>
+
+        <footer class="tweet-foot">
+          <h5 class="post-date"> 10 days ago </h5>
+        </footer>
+
+      </article> -->
     </section>
 
 */
@@ -18,21 +40,28 @@ html we're working with
   justify-content: center;
   background-color: #bcc5c58a;
   border-radius: 10px;
-  border: 15px;
-  border-color: grey;
+  border: 1px;
+  border-style: double;
+  border-color: #244751;
  /* margin-left: 2em;
   margin-right: 2em*/
   padding: 2px;
+  height: auto;
 }
 
-section h2 {
+.new-tweet h2 {
 
 /*  display:flex -stretch;*/
  /* border-bottom-style:1px;
   border-bottom-color: black;*/
-  padding-left: 5px;
+/*  padding-left: 5px;
   padding right: 5px;
-  border-bottom-style: solid;
+  border-bottom-style: solid;*/
+
+  margin: 5px;
+  padding-left: 5px;
+/*  padding right: 5px;*/
+ border-bottom-style: solid;
 
 
 
@@ -41,26 +70,40 @@ section h2 {
 
 section form {
 
-  display:flex-end;
-  align-content:
+  display:flex;
+  flex-direction: column;
+  padding: 5px;
+}
 
+textarea {
+  width: 100%;
+  height: 65px;
+  padding: 3px;
+  flex-direction: column;
+}
+
+.button-counter {
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+
+}
+
+form input {
+  height:35px;
+}
+
+.counter {
+  font-size: small;
 }
 
 div.error-message{
- /*s*/
-/*background-color: red*/
+
 display:none;
-background-color:aliceblue;
-color: red
+background-color:red;
+color: white;
 
-}
-
-.visible-error{
-  background-color: blue
-}
-
-.hidden-error{
-  display: none;
 }
 
 
@@ -74,18 +117,117 @@ color: red
   border-radius: 10px;*/
 }
 
+.tweet:hover{
+  opacity:1;
+ /* & .icons{
+    visibility: visible;
+  }*/
+}
+
+.tweet {
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    /*border-style: solid;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 250px;
+   /* border-radius: 10px;*/
+  }
+
+
 header.tweet-header {
-  background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: auto;
+    background-color: #00a087b8;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-left: solid 1px darkgray;
+    border-right: solid 1px darkgrey;
+    border-top: solid 1px darkgray;
 }
 
-section.tweet-body {
-   background-color: aliceblue;
-   margin: ;
+.leftside {
+  display: flex;
+  flex-direction: row
+
+}
+.avatar {
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left:10px;
+
 }
 
-footer.tweet-foot {
-  background-color: aquamarine;
+.tweet-header h2{
+  align-self: center;
+  padding-right: 30px;
+
 }
+
+.handle {
+  display: flex;
+  align-self: center;
+  /*margin-left: 200px;*/
+  padding-right: 10px;
+  flex-direction: row-reverse;
+  /*margin-right: auto;*/
+  justify-content: flex-end;
+}
+
+
+.tweet-body {
+  display: flex;
+  height: 50%;
+  background-color: white;
+  padding: 15px;
+  align-content: center;
+  border-left: solid 1px darkgray;
+  border-right: solid 1px darkgrey;
+ /* justify-content: center;*/
+ /*margin: ;*/
+}
+
+
+.tweet-foot {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #00a08738;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 17%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: solid 1px lightgrey;
+    border-left: solid 1px darkgray;
+  border-right: solid 1px darkgrey;
+  border-bottom: solid 1px darkgrey;
+}
+}
+
+.icons {
+
+  display: flex;/*
+  visibility: hidden;*/
+  justify-content:space-around;
+ /* height: 3px;*/
+  /*width:auto;
+*/
+}
+
+/*.
+ <footer class="tweet-foot">
+      <h5 class="post-date">${tweet.created_at}</h5>
+      <div class="icons">
+        <i class="far fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+      <div>
+    </footer>*/
 
 /* <section id="tweet-container">
       <article class="tweet">

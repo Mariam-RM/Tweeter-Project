@@ -32,11 +32,13 @@ body {
   margin: auto;
   background-color: white;
   padding: 15px;
-  margin-top: 140px
+  padding-top: 140px
 
+}
 
-
- }
+#tweet-container {
+  margin-top: 10px;
+}
 
 .countTooHigh {
   color: red;

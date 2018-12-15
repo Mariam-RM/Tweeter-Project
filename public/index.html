@@ -32,9 +32,11 @@
 
     <!-- Top nav bar (fixed) -->
     <nav id="nav-bar">
+      <div class="leftnav">
       <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
-      <button type="button"> Compose </button>
+      </div>
+      <button id="composeButton" type="button"> Compose </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -46,8 +48,10 @@
     <!--   <div class="error-message"> </div> -->
       <form action="/tweets/" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input type="submit" value="Tweet">
-        <span class="counter">140</span>
+        <div class="button-counter">
+          <input type="submit" value="Tweet">
+          <span class="counter">140</span>
+        </div>
       </form>
     </section>
 

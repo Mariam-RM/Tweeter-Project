@@ -22,21 +22,30 @@ function createTweetElement(tweet){
 
   let header = `
    <header class="tweet-header">
-     <img src="${tweet.user.avatars.small}" class="avatar" >
-     <h3>${tweet.user.name}</h3>
-     <h4 class="handle">${tweet.user.handle}</h4>
+      <div class ="leftside">
+         <img src="${tweet.user.avatars.small}" class="avatar" >
+         <h2>${tweet.user.name}</h2>
+     </div>
+     <div class="handle">
+        <h4>${tweet.user.handle}</h4>
+    </div>
    </header>
   `;
 
   let tweetBody = `
     <section class="tweet-body">
-    ${escape(tweet.content.text)}
+    <p>${escape(tweet.content.text)}</p>
     </section>
   `;
 
   let footer = `
     <footer class="tweet-foot">
-    <h5 class="post-date">${tweet.created_at}</h5>
+      <h5 class="post-date">${tweet.created_at}</h5>
+      <div class="icons">
+        <i class="far fa-flag"></i>
+        <i class="fas fa-retweet"></i>
+        <i class="far fa-heart"></i>
+      </div>
     </footer>
   `;
 
