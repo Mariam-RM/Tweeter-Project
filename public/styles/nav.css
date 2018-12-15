@@ -3,7 +3,7 @@
 #nav-bar {
 
   position: fixed;
-  opacity: 1;
+  z-index: 1;
   height: 80px;
   width: 100%;
   background-color: #00a087;

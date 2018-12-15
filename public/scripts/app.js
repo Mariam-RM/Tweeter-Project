@@ -7,11 +7,28 @@
 
 $(document).ready(function(){
 
+
+//function preventing cross site scripting
 function escape(str) {
   var div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 }
+
+//function to display relevant date
+// function secondsToDate (seconds){
+
+//   var years = Math.floor(seconds / (3600*24*365))
+//   seconds -= years*3600*24*365;
+//   var days = Math.floor(seconds / (3600*24));
+//   seconds  -= days*3600*24;
+//   var hrs   = Math.floor(seconds / 3600);
+//   seconds  -= hrs*3600;
+//   var mnts = Math.floor(seconds / 60);
+//   seconds  -= mnts*60;
+
+//   return years + "years" + days + "days" + min + "min" + seconds + "seconds" ago;
+// }
 
 
 function createTweetElement(tweet){
@@ -40,16 +57,17 @@ function createTweetElement(tweet){
 
   let footer = `
     <footer class="tweet-foot">
-      <h5 class="post-date">${tweet.created_at}</h5>
+      <h5 class="post-date">${moment(tweet.created_at).fromNow()}</h5>
       <div class="icons">
-        <i class="far fa-flag"></i>
-        <i class="fas fa-retweet"></i>
-        <i class="far fa-heart"></i>
+        <i class="material-icons"> outlined_flag </i>
+        <i class="material-icons"> repeat </i>
+        <i class="material-icons">favorite_border </i>
       </div>
     </footer>
   `;
 
-  console.log("whats a tweet, ", $tweet)
+  // console.log("whats a tweet, ", $tweet)
+  // Sent ${escape(moment(input["created_at"]).fromNow())
 
   // let securedTweetBody = $("tweet-body").text(tweetBody);
 
@@ -71,7 +89,7 @@ function renderTweets(tweetArray) {
     var newTweet = createTweetElement(tweet);
 
 
-    $("#tweet-container").append(newTweet)
+    $("#tweet-container").prepend(newTweet)
   }
 }
 

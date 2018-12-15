@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,700,700i" rel="stylesheet">
 
+
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
@@ -26,6 +30,9 @@
     <!-- character-counter JS -->
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 
+    <!-- calculating the date -->
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"></script>
+
   </head>
 
   <body>
@@ -36,7 +43,9 @@
       <img class="logo" src="/images/bird.png" >
       <span class="header">Tweeter</span>
       </div>
-      <button id="composeButton" type="button"> Compose </button>
+      <button id="composeButton" type="button"> Compose
+        <i class="material-icons">create</i>
+      </button>
     </nav>
 
     <!-- Page-specific (main) content here -->
@@ -45,7 +54,6 @@
     <section class="new-tweet">
       <div class="error-message"> </div>
       <h2>Compose Tweet</h2>
-    <!--   <div class="error-message"> </div> -->
       <form action="/tweets/" method="POST">
         <textarea name="text" placeholder="What are you humming about?"></textarea>
         <div class="button-counter">
@@ -56,33 +64,8 @@
     </section>
 
     <section id="tweet-container">
-     <!--  <article class="tweet">
-
-        <header class="tweet-header">
-          <img class="avatar">
-          <h3> My name </h3>
-          <h4 class=handle> myHandle </h4>
-        </header>
-
-        <section class="tweet-body"> <p> trying to make this work and praying that css is nice </p>
-        </section>
-
-        <footer class="tweet-foot">
-          <h5 class="post-date"> 10 days ago </h5>
-        </footer>
-
-      </article> -->
+      <!-- the relevent code can be found in app.js -->
     </section>
-
-    <!-- <h2> checking to see if this actually works </h2>
-
-    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia de </p>
- -->
     </main>
 
 
