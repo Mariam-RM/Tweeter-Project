@@ -15,25 +15,8 @@ function escape(str) {
   return div.innerHTML;
 }
 
-//function to display relevant date
-// function secondsToDate (seconds){
-
-//   var years = Math.floor(seconds / (3600*24*365))
-//   seconds -= years*3600*24*365;
-//   var days = Math.floor(seconds / (3600*24));
-//   seconds  -= days*3600*24;
-//   var hrs   = Math.floor(seconds / 3600);
-//   seconds  -= hrs*3600;
-//   var mnts = Math.floor(seconds / 60);
-//   seconds  -= mnts*60;
-
-//   return years + "years" + days + "days" + min + "min" + seconds + "seconds" ago;
-// }
-
-
 function createTweetElement(tweet){
 
-  // let $tweet = $("<article>").addClass("tweet");
 
   let $tweet = $("<article class='tweet'></article>");
 
@@ -66,17 +49,13 @@ function createTweetElement(tweet){
     </footer>
   `;
 
-  // console.log("whats a tweet, ", $tweet)
-  // Sent ${escape(moment(input["created_at"]).fromNow())
 
-  // let securedTweetBody = $("tweet-body").text(tweetBody);
-
-$tweet.append(header);
-$tweet.append(tweetBody);
-$tweet.append(footer);
+  $tweet.append(header);
+  $tweet.append(tweetBody);
+  $tweet.append(footer);
 
 
-return $tweet;
+  return $tweet;
 
 }
 
@@ -87,16 +66,13 @@ function renderTweets(tweetArray) {
     // takes return value and appends it to the tweets container
   for(tweet of tweetArray){
     var newTweet = createTweetElement(tweet);
-
-
-    $("#tweet-container").prepend(newTweet)
+    $("#tweet-container").prepend(newTweet); // changed to prepend so newest tweets appear first
   }
 }
 
 //function with jQuery actions that need to be displayed as the error message
 function reset(errorMessage){
   $( ".error-message" ).slideUp( "slow", function() {
-
       $( ".error-message" ).slideDown( "slow", function() {
         $(".error-message").text(errorMessage);
       });
@@ -119,15 +95,13 @@ $("form").submit(function(event){
     reset(" Cannot post empty field!");
 
   } else {
-    console.log("what is this", $(this).serialize());
-    $.ajax({url: '/tweets', type: 'POST', data: $( this ).serialize()})
+      $.ajax({url: '/tweets', type: 'POST', data: $( this ).serialize()})
       .then(function (){
            $(".new-tweet textarea").val('')
       })
       .then(function(){
         loadTweets();
       })
-
   }
 
 });
@@ -138,8 +112,7 @@ $("button").on("click", function(){
   $( ".new-tweet" ).slideToggle( "slow", function() {
       $("textarea").focus()
   });
-
-})
+});
 
 
 // getting tweets with ajax
@@ -150,11 +123,7 @@ function loadTweets(){
       renderTweets(data);
       console.log("this is working")
     })
+};
 
 
-}
-
-
-
-
-})
+});
